@@ -340,17 +340,25 @@ footer {
   padding-top: 70px;
   background-color: #393939;
   font-family: "Lato";
+
+  margin-bottom: 3000px;
 }
 
-footer .wrapper {
-  
+footer .wrapper {  
   text-align: center;
+  position: relative;
 }
 
 footer .octagon-wrap {
   width: 115px;
   height: 115px;
+  
+}
+
+footer .octagon-wrap::after {
+  content: "";
   display: block;
+  clear: both;
 }
 
 footer .octagon {
@@ -358,6 +366,7 @@ footer .octagon {
 }
 
 footer ul {
+  margin-top: 300px;
   list-style: none;
   color: #a6a6a6;
   display: flex;
