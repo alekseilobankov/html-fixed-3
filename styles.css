@@ -23,6 +23,8 @@
 body {
   padding: 0;
   margin: 0 auto;
+  max-width: 100%; 
+  overflow-x: hidden; 
 }
 
 .wrapper {
@@ -94,7 +96,7 @@ header li a {
 }
 
 #billboard {
-  position: relative;
+
 }
 
 .mountains {
@@ -143,16 +145,18 @@ header li a {
   color: #fff;
 }
 
-.services {
+.service-wrapper {
   display: flex;
-  justify-content: center;
-  column-gap: 1.5%;
-  margin-top: -90px;  
-  z-index: 5;
-  /* position: absolute;   */
-  /* left: 50%;
-  top: 515px; */  
-  /* transform: translateX(-50%); */
+  flex-direction: column;  
+  align-items: center;
+}
+
+.services {  
+  display: flex;  
+  position: relative;
+  justify-content: center;  
+  column-gap: 10%;
+  margin-top: -90px;      
 }
 
 .service {
@@ -161,14 +165,16 @@ header li a {
   font-family: "Lato";
   color: #646363;  
   padding: 0 30px;
+  position: relative;
+  z-index: 1;  
 }
 
 .service .logo {
   width: 160px;
   height: 160px;
   border-radius: 80px;
-  background-color: #646363;
-  margin: 0 auto;  
+  background-color: #575451;
+  margin: 0 auto;    
 }
 
 .service .logo img {
@@ -182,6 +188,25 @@ header li a {
 
 .services p {
   font-size: 14px;
+}
+
+.connector {
+  top: 88px;    
+  position: absolute;
+  height: 4px;
+  background-color: #575451;
+  left: 125;
+  right: 125;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.connector .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: inherit;
 }
 
 #sign {
@@ -314,10 +339,10 @@ input:first-child {
 input[type="text"] {
   padding: 8px 8px 8px 32px;
   width: 250px;  
+  font-size: 16px;
 }
 
 input::placeholder {
-  font-size: 14px;
   color: #7e7d7d;
 }
 
@@ -340,35 +365,65 @@ footer {
   padding-top: 70px;
   background-color: #393939;
   font-family: "Lato";
-
-  margin-bottom: 3000px;
 }
 
 footer .wrapper {  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  position: relative;
+}
+
+footer .logo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Champagne-Bold";
+  font-size: 35px;
+  color: #333333;
 }
 
 footer .octagon-wrap {
   width: 115px;
-  height: 115px;
-  
-}
-
-footer .octagon-wrap::after {
-  content: "";
-  display: block;
-  clear: both;
+  height: 115px;  
 }
 
 footer .octagon {
-  background-color: #575451;    
+  background-color: #333333;    
+}
+
+footer .logo h3 {
+  margin: 20px 0 0 0;
 }
 
 footer ul {
-  margin-top: 300px;
+  margin-top: 50px;
+  padding: 0;
   list-style: none;
-  color: #a6a6a6;
   display: flex;
-  column-gap: 20px;
+  justify-content: center;
+  column-gap: 20px;    
+}
+
+footer a {
+  text-decoration: none;
+  color: #a6a6a6;
+  font-family: "Lato";
+  font-weight: 800;
+}
+
+footer a:focus {
+  outline: none;
+}
+
+footer p {
+  width: 370px;  
+  height: 50px;
+  line-height: 50px;
+  border-top: 1px solid #a6a6a6;
+  font-family: "Lato";  
+  font-size: 13px;
+  color: #a6a6a6;
+  margin-bottom: 100px;
 }
